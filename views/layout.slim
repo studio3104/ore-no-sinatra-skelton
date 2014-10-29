@@ -1,0 +1,19 @@
+doctype html
+html lang="en"
+  head
+    meta charset="UTF-8"
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    link rel="stylesheet" type="text/css" href="/css/application.min.css"
+
+  body
+    .container
+      .row
+        == yield
+
+    script src="/js/jquery.min.js"
+    script src="/js/underscore-min.js"
+    script src="/js/vue.min.js"
+    script src="/js/bootstrap.min.js"
+    script src="/js/material.min.js"
+    script src="/js/ripples.min.js"
+    script src="/js/application.js"

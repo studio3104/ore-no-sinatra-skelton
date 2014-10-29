@@ -1,0 +1,2 @@
+module Skelton
+end
