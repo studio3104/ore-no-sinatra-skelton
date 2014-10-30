@@ -42,8 +42,16 @@ module.exports = (grunt) ->
           cleanTargetDir: true
           cleanBowerDir: false
 
+    esteWatch:
+      options:
+        dirs: [ 'assets' ]
+      'coffee': (path) -> [ 'coffee' ]
+      'scss': (path) -> [ 'compass', 'cssmin' ]
+
   grunt.loadNpmTasks 'grunt-bower-task'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-compass'
-  grunt.loadNpmTasks('grunt-contrib-cssmin')
-  grunt.registerTask 'default', [ 'bower', 'coffee', 'compass', 'cssmin' ]
+  grunt.loadNpmTasks 'grunt-contrib-cssmin'
+  grunt.loadNpmTasks 'grunt-este-watch'
+  grunt.registerTask 'make', [ 'bower', 'coffee', 'compass', 'cssmin' ]
+  grunt.registerTask 'default', [ 'make', 'esteWatch' ]
