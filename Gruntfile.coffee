@@ -33,10 +33,11 @@ module.exports = (grunt) ->
         options:
           targetDir: 'public'
           layout: (type, component) ->
-            if type is 'scss'
-              return "#{type}/#{component}"
-            else
-              return type
+            path = if type is 'scss' || type is 'fonts' && component is 'bootstrap'
+                     "#{type}/#{component}"
+                   else
+                     type
+            path
           install: true
           cleanTargetDir: true
           cleanBowerDir: false
