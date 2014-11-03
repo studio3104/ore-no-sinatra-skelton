@@ -6,29 +6,30 @@
     "underscore": "latest",
     "jquery": "latest",
     "bootstrap": "latest",
-    "bootstrap-sass-official": "latest",
-    "bootstrap-material-design": "latest",
+    "bootswatch": "latest",
     "Font-Awesome": "latest"
   },
-  "exportsOverride": {
-    "jquery": { "js": [ "**/*.min.js", "**/*.min.map" ] },
-    "underscore": { "js": [ "**/*-min.js", "**/*-min.map" ] },
-    "vue": { "js": "**/*.min.js"  },
-    "bootstrap": {
-      "js": "**/*.min.js" ,
-      "fonts": [ "**/*.eot", "**/*.svg", "**/*.ttf", "**/*.woff" ]
-    },
-    "bootstrap-sass-official": {
-      "scss": "assets/stylesheets"
-    },
-    "bootstrap-material-design": {
-      "js": "**/*.min.js" ,
-      "scss": "sass",
-      "fonts": [ "**/*.eot", "**/*.svg", "**/*.ttf", "**/*.woff" ]
-    },
-    "Font-Awesome": {
-      "scss": "scss",
-      "fonts": [ "**/.*.otf", "**/*.eot", "**/*.svg", "**/*.ttf", "**/*.woff" ]
-    }
-  }
+   "exportsOverride": {
+     "jquery": {
+       "js": "dist/*"
+     },
+     "underscore": {
+       "js": [ "underscore-min.js", "underscore-min.map" ]
+     },
+     "vue": {
+       "js": "dist/vue.min.js"
+     },
+     "bootstrap": {
+       "js": "dist/js/bootstrap.min.js",
+       "css": [ "dist/css/*.min.css", "dist/css/*.map" ],
+       "fonts": "dist/fonts/*"
+     },
+     "bootswatch": {
+       "css": "journal/bootstrap.min.css"
+     },
+     "Font-Awesome": {
+       "css": "css/font-awesome.min.css",
+       "fonts": "fonts/*"
+     }
+   }
 }

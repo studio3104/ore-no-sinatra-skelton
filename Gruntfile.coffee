@@ -32,9 +32,11 @@ module.exports = (grunt) ->
       install:
         options:
           targetDir: 'public'
-          layout: (type, component) ->
-            path = if type is 'scss' || type is 'fonts' && component is 'bootstrap'
+          layout: (type, component, bower_path) ->
+            path = if component == 'bootswatch' && type == 'css'
                      "#{type}/#{component}"
+                   else if component == 'bootstrap' && type == 'fonts'
+                     "css/#{type}"
                    else
                      type
             path
